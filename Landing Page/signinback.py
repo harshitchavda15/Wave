@@ -79,7 +79,7 @@ def signup(request: SignUpRequest, db: Session = Depends(get_db)):
 
 # Login Route
 @app.post("/login")
-def login(request: LoginRe9quest, db: Session = Depends(get_db)):
+def login(request: LoginRequest, db: Session = Depends(get_db)):
     # Check if the user exists
     user = db.query(User).filter(User.username == request.username).first()
     if not user:
