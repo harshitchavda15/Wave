@@ -1,0 +1,181 @@
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(#001eff #596ed5 180deg);
+  color: #fff; /* Text color for better readability */
+}
+
+#backgroundSVG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+nav.topNav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 3vh;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.links h4 {
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  transition: color 0.3s ease, border 0.3s ease;
+}
+
+
+.links a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links h4:hover {
+  color: #002aff;
+  border: 1px solid #001eff;
+}
+
+
+/* For very large screens (min-width: 1600px) */
+@media (min-width: 1600px) {
+  .links h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+  }
+  .logo a {
+      font-size: 2rem;
+      font-weight: 800;
+  }
+  .content p {
+      font-size: 1.5rem;
+  }
+}
+
+/* For large screens (min-width: 1200px and max-width: 1599px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .links h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+  .logo a {
+      font-size: 1.7rem;
+      font-weight: 700;
+  }
+  .content p {
+      font-size: 3rem;
+  }
+}
+
+/* For medium screens (min-width: 992px and max-width: 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .links h4 {
+      font-size: 1.3em;
+  }
+  .logo a {
+      font-size: 2.3rem;
+  }
+  .content p {
+      font-size: 2rem;
+  }
+}
+
+/* For tablets and small laptops (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .links h4 {
+      font-size: 1.4rem;
+  }
+  .logo a {
+      font-size: 2rem;
+  }
+  .content p {
+      font-size: 1rem;
+  }
+}
+
+/* For large phones and small tablets (min-width: 576px and max-width: 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .links h4 {
+      font-size: 1.3rem;
+  }
+  .logo a {
+      font-size: 1.7rem;
+  }
+  .content p {
+      font-size: 0.9rem;
+  }
+}
+
+/* For small phones (min-width: 430px and max-width: 575px) */
+@media (min-width: 430px) and (max-width: 575px) {
+  .links h4 {
+      font-size: 1.3rem;
+  }
+  .logo a {
+      font-size: 1.6rem;
+      font-weight: 700;
+  }
+  .content p {
+      font-size: 0.8rem;
+  }
+}
+
+/* For extra small screens (max-width: 429px) */
+@media (max-width: 429px) {
+  .links h4 {
+      font-size: 1.3vh;
+  }
+  .logo a {
+      font-size: 2vh;
+      font-weight: 900;
+  }
+  .content p {
+      font-size: 4vh;
+  }
+}
+
+/* For very small screens (max-width: 375px) */
+@media (max-width: 375px) {
+  .links h4 {
+      font-size: 1.2vh;
+      font-weight: 500;
+  }
+  .logo a {
+      font-size: 1.5vh;
+      font-weight: 900;
+  }
+  .content p {
+      font-size: 3vh;
+  }
+}

@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(to bottom right, #121212, #1c1c1c);
+  color: #f0f0f0;
+  overflow-x: hidden;
+  background: url('./images/background.svg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+nav.sideBar {
+  color: var(--text-color);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  padding: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 0px 20px 20px 0px;
+  backdrop-filter: blur(10px);
+  margin: 15px 0px 15px 0px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.logo a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.navigation ul {
+  list-style: none;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.navigation ul li {
+  padding: 10px 0;
+
+}
+
+.navigation ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.navigation ul li a:hover {
+  color: rgb(208, 208, 208);
+}
+
+.fa {
+  margin-right: 10px;
+}
+
+.policies {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.policies ul {
+  list-style: none;
+  padding: 0;
+}
+
+.policies ul li {
+  padding: 5px 0;
+}
+
+.policies ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.policies ul li a:hover {
+  color: #f9efffd7;
+  text-decoration: underline;
+}
+
+main.mainContainer {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+header.topNav {
+  z-index: 10;
+  position: fixed;
+  left: 250px;
+  right: 35px;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+header .message {
+  font-size: 1.2rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  cursor: pointer;
+  color: #f0f0f0;
+  font-size: 1.2rem;
+}
+
+header .songLinks ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+header .songLinks ul li {
+  margin-left: 20px;
+}
+
+header .songLinks ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header .songLinks ul li a:hover {
+  color: #ffffff;
+}
+
+
+
+section.wavePlaylist {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(109, 106, 106);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 13px;
+}
+
+section.wavePlaylist h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffffb7;
+}
+
+section.wavePlaylist .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+section.wavePlaylist .item {
+  position: relative;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 10px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+section.wavePlaylist .item:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+section.wavePlaylist .item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+section.wavePlaylist .item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+section.wavePlaylist .item p {
+  font-size: .8rem;
+  color: #ebe4e4;
+  font-weight: 600;
+  line-height: 20px;
+}

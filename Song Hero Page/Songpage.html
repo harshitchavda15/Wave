@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wave Homepage - Your music, your waves." />
+  <meta name="keywords" content="music, playlists, songs, wave, audio" />
+  <link rel="stylesheet" href="SongPage.css" />
+  <link rel="icon" href="./images/W-transperent.png" />
+
+  <title>WAVE HOMEPAGE</title>
+</head>
+
+<body>
+
+  <nav class="sideBar">
+    <div class="logo">
+      <a href="#">
+        <h1 class="WAVE">Wave</h1>
+      </a>
+    </div>
+    <div class="navigation">
+      <ul class="navLinks">
+        <li class="link">
+          <a href="#"><i class="fa-solid fa-arrow-trend-up"></i>&nbsp;<span>Trending</span></a>
+        </li>
+
+        <li class="link">
+          <a href="#"><i class="fa-solid fa-layer-group"></i>&nbsp;<span>Your Waves</span></a>
+        </li>
+
+        <li class="link">
+          <a href="#"><i class="fa-regular fa-heart"></i>&nbsp;<span>Liked Songs</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="policies">
+      <ul>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main class="mainContainer">
+
+    <header class="topNav">
+
+      <!-- home icon -->
+        
+      <a href="../Home Page/Home.html">
+        <i class="fa fa-home HomeICON"></i>
+      </a>
+
+      <div class="SearchAndIconContainer">
+
+        <!-- Search Bar Container -->
+
+        <i class="fa fa-search" id="SearchIcon" onclick="SearchIcon()"></i>
+
+
+
+        <div class="search-container" id="toggleSearchBar">
+
+          <i id="searchIcon" class="fas fa-search"></i>
+          <i id="closeIcon" class="fa-solid fa-trash" onclick="clearSearch()" style="display: none;"></i>
+          <input type="text" id="searchInput" placeholder="Search for an artist or song..." onkeyup="searchArtists()">
+          <div id="resultsDropdown" class="results-dropdown"></div>
+
+        </div>
+
+        <i class="fa fa-close" id="CloseIcon" onclick="closeSearchBar()"></i>
+
+      </div>
+
+
+    </header>
+
+    <div class="songPlaylistContainer">
+
+      <div class="songPlayer">
+        <div class="songIMG">
+          <img src="./images/Chill Hits.jpg" alt="">
+        </div>
+
+        <div class="songName">
+          Chamk Challo
+        </div>
+
+        <div class="artistName">
+          RAM jane
+        </div>
+
+        <div class="rangeDurationControlsContainer">
+          <div class="rangeHolder">
+            <input type="range" class="range">
+            <p class="songDuration">3:33</p>
+          </div>
+
+          <div class="controls">
+
+            <label class="containerLike">
+              <input type="checkbox">
+              <div class="checkmark">
+                <svg viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" class="icon">
+                  <path
+                    d="M 24.10 6.29 Q 28.34 7.56 28.00 12.00 Q 27.56 15.10 27.13 18.19 A 0.45 0.45 4.5 0 0 27.57 18.70 Q 33.16 18.79 38.75 18.75 Q 42.13 18.97 43.23 21.45 Q 43.91 22.98 43.27 26.05 Q 40.33 40.08 40.19 40.44 Q 38.85 43.75 35.50 43.75 Q 21.75 43.75 7.29 43.75 A 1.03 1.02 0.0 0 1 6.26 42.73 L 6.42 19.43 A 0.54 0.51 -89.4 0 1 6.93 18.90 L 14.74 18.79 A 2.52 2.31 11.6 0 0 16.91 17.49 L 22.04 7.17 A 1.74 1.73 21.6 0 1 24.10 6.29 Z M 21.92 14.42 Q 20.76 16.58 19.74 18.79 Q 18.74 20.93 18.72 23.43 Q 18.65 31.75 18.92 40.06 A 0.52 0.52 88.9 0 0 19.44 40.56 L 35.51 40.50 A 1.87 1.83 5.9 0 0 37.33 39.05 L 40.51 23.94 Q 40.92 22.03 38.96 21.97 L 23.95 21.57 A 0.49 0.47 2.8 0 1 23.47 21.06 Q 23.76 17.64 25.00 12.00 Q 25.58 9.36 24.28 10.12 Q 23.80 10.40 23.50 11.09 Q 22.79 12.80 21.92 14.42 Z M 15.57 22.41 A 0.62 0.62 0 0 0 14.95 21.79 L 10.01 21.79 A 0.62 0.62 0 0 0 9.39 22.41 L 9.39 40.07 A 0.62 0.62 0 0 0 10.01 40.69 L 14.95 40.69 A 0.62 0.62 0 0 0 15.57 40.07 L 15.57 22.41 Z"
+                    fill-opacity="1.000"></path>
+                  <circle r="1.51" cy="37.50" cx="12.49" fill-opacity="1.000"></circle>
+                </svg>
+              </div>
+              <p class="like">Liked!</p>
+            </label>
+
+
+            <button class="control-btn"><i class="fa fa-backward" onclick="toggle_play_pause()"></i></button>
+            <div class="playPauseBtns">
+              <button class="control-btn" id="playBtn"><i class="fa fa-play"></i></button>
+            </div>
+            <button class="control-btn"><i class="fa fa-forward"></i></button>
+
+            <label class="containerPlus">
+              <input type="checkbox">
+              <div class="line"></div>
+              <div class="line line-indicator"></div>
+            </label>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="playlistSongs" id="playlistSongs"></div>
+
+  </main>
+
+  <script>
+    // Function to create a song card
+    function createSongCard(song) {
+      return `
+        <div class="songCard">
+          <div class="imageHolder">
+            <img src="${song.image}" alt="Song Image" class="songImage" />
+          </div>
+          <div class="songInfo">
+            <div class="songName">${song.songName}</div>
+            <div class="artistName">${song.artistName}</div>
+          </div>
+          <div class="songDetails">
+            <div class="duration songCardPlay">${song.duration} <i class="fas fa-play playIcon"></i></div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Function to update the song player with selected song details
+    function updateSongPlayer(song) {
+      const songPlayer = document.querySelector('.songPlayer');
+      songPlayer.querySelector('.songIMG img').src = song.image;
+      songPlayer.querySelector('.songName').textContent = song.songName;
+      songPlayer.querySelector('.artistName').textContent = song.artistName;
+      songPlayer.querySelector('.rangeHolder .songDuration').textContent = song.duration;
+    }
+
+    // Function to toggle play/pause icons in song player
+    function togglePlayPauseInPlayer(isPlaying) {
+      const playBtn = document.getElementById('playBtn');
+      if (isPlaying) {
+        playBtn.innerHTML = '<i class="fa fa-pause"></i>';
+      } else {
+        playBtn.innerHTML = '<i class="fa fa-play"></i>';
+      }
+    }
+
+    // Fetch the songs data from JSON file
+    fetch('songs.json')
+      .then(response => response.json())
+      .then(songs => {
+        const playlist = document.getElementById('playlistSongs');
+        playlist.innerHTML = songs.map(song => createSongCard(song)).join('');
+
+        // Attach play/pause logic after rendering
+        playPauseSongCard(songs);
+      })
+      .catch(error => console.error('Error fetching songs:', error));
+
+    // Play/Pause logic for song cards and update the song player
+    // Play/Pause logic for song cards and update the song player
+      function playPauseSongCard(songs) {
+        const playlist = document.getElementById("playlistSongs");
+        const songPlayerPlayBtn = document.getElementById("playBtn");
+        let currentSongIndex = -1;
+
+        playlist.addEventListener("click", function (e) {
+          if (e.target.closest(".songCardPlay")) {
+            const clickedCard = e.target.closest(".songCard");
+            const clickedPlayIcon = clickedCard.querySelector(".playIcon");
+            const songIndex = Array.from(playlist.children).indexOf(clickedCard);
+
+            // Update the song player with the new song details
+            const selectedSong = songs[songIndex];
+            updateSongPlayer(selectedSong);
+
+            // Pause any other song that is currently playing
+            const allPlayIcons = document.querySelectorAll(".playIcon");
+            allPlayIcons.forEach((icon) => {
+              if (icon !== clickedPlayIcon) {
+                icon.classList.remove("fa-pause");
+                icon.classList.add("fa-play");
+              }
+            });
+
+            // Toggle the clicked song's play/pause state
+            if (clickedPlayIcon.classList.contains("fa-play")) {
+              clickedPlayIcon.classList.remove("fa-play");
+              clickedPlayIcon.classList.add("fa-pause");
+
+              // Update the play button in the song player
+              togglePlayPauseInPlayer(true);
+              currentSongIndex = songIndex;
+            } else {
+              clickedPlayIcon.classList.remove("fa-pause");
+              clickedPlayIcon.classList.add("fa-play");
+
+              // Update the play button in the song player
+              togglePlayPauseInPlayer(false);
+            }
+          }
+        });
+
+        // Synchronize the play/pause button in the song player with the song cards
+        songPlayerPlayBtn.addEventListener("click", function () {
+          const isPlaying = songPlayerPlayBtn.innerHTML.includes("pause");
+          togglePlayPauseInPlayer(!isPlaying);
+
+          // Update the corresponding song card's play/pause icon
+          if (currentSongIndex !== -1) {
+            const currentSongCard = playlist.children[currentSongIndex];
+            const currentPlayIcon = currentSongCard.querySelector(".playIcon");
+
+            if (isPlaying) {
+              currentPlayIcon.classList.remove("fa-pause");
+              currentPlayIcon.classList.add("fa-play");
+            } else {
+              currentPlayIcon.classList.remove("fa-play");
+              currentPlayIcon.classList.add("fa-pause");
+            }
+          }
+        });
+      }
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

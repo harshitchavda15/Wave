@@ -1,0 +1,426 @@
+{
+  "artists": [
+    {
+      "name": "Taylor Swift",
+      "country": "USA",
+      "songs": [
+        "Love Story",
+        "Blank Space",
+        "Shake It Off",
+        "You Belong with Me",
+        "Style",
+        "Bad Blood",
+        "We Are Never Ever Getting Back Together",
+        "Wildest Dreams",
+        "I Knew You Were Trouble",
+        "Cardigan",
+        "Willow",
+        "Delicate"
+      ]
+    },
+    {
+      "name": "Ed Sheeran",
+      "country": "UK",
+      "songs": [
+        "Shape of You",
+        "Perfect",
+        "Thinking Out Loud",
+        "Photograph",
+        "Castle on the Hill",
+        "Galway Girl",
+        "Happier",
+        "Bad Habits",
+        "Shivers",
+        "Afterglow",
+        "Lego House",
+        "The A Team"
+      ]
+    },
+    {
+      "name": "Adele",
+      "country": "UK",
+      "songs": [
+        "Hello",
+        "Someone Like You",
+        "Rolling in the Deep",
+        "Set Fire to the Rain",
+        "When We Were Young",
+        "Skyfall",
+        "Water Under the Bridge",
+        "Send My Love",
+        "Chasing Pavements",
+        "Hometown Glory",
+        "Easy On Me",
+        "Turning Tables"
+      ]
+    },
+    {
+      "name": "BTS",
+      "country": "South Korea",
+      "songs": [
+        "Dynamite",
+        "Butter",
+        "Permission to Dance",
+        "Boy With Luv",
+        "Fake Love",
+        "Blood Sweat & Tears",
+        "Idol",
+        "Mic Drop",
+        "Spring Day",
+        "DNA",
+        "Life Goes On",
+        "On"
+      ]
+    },
+    {
+      "name": "The Weeknd",
+      "country": "Canada",
+      "songs": [
+        "Blinding Lights",
+        "Save Your Tears",
+        "Starboy",
+        "The Hills",
+        "Can't Feel My Face",
+        "In the Night",
+        "I Feel It Coming",
+        "Earned It",
+        "Call Out My Name",
+        "Pray For Me",
+        "Heartless",
+        "Take My Breath"
+      ]
+    },
+    {
+      "name": "Eminem",
+      "country": "USA",
+      "songs": [
+        "Lose Yourself",
+        "Rap God",
+        "Not Afraid",
+        "Stan",
+        "The Real Slim Shady",
+        "Without Me",
+        "Love the Way You Lie",
+        "Mockingbird",
+        "Till I Collapse",
+        "Godzilla",
+        "The Way I Am",
+        "When I'm Gone"
+      ]
+    },
+    {
+      "name": "Coldplay",
+      "country": "UK",
+      "songs": [
+        "Fix You",
+        "Yellow",
+        "Viva La Vida",
+        "Paradise",
+        "Clocks",
+        "A Sky Full of Stars",
+        "The Scientist",
+        "Hymn for the Weekend",
+        "Something Just Like This",
+        "Every Teardrop Is a Waterfall",
+        "Adventure of a Lifetime",
+        "Magic"
+      ]
+    },
+    {
+      "name": "Billie Eilish",
+      "country": "USA",
+      "songs": [
+        "Bad Guy",
+        "Lovely",
+        "When the Party's Over",
+        "Everything I Wanted",
+        "Ocean Eyes",
+        "Bury a Friend",
+        "You Should See Me in a Crown",
+        "Happier Than Ever",
+        "My Future",
+        "No Time to Die",
+        "Therefore I Am",
+        "Your Power"
+      ]
+    },
+    {
+      "name": "Dua Lipa",
+      "country": "UK",
+      "songs": [
+        "Levitating",
+        "Don't Start Now",
+        "New Rules",
+        "Break My Heart",
+        "Physical",
+        "IDGAF",
+        "Be the One",
+        "Hotter Than Hell",
+        "Love Again",
+        "We're Good",
+        "Future Nostalgia",
+        "Hallucinate"
+      ]
+    },
+    {
+      "name": "Shawn Mendes",
+      "country": "Canada",
+      "songs": [
+        "Stitches",
+        "Treat You Better",
+        "There's Nothing Holdin' Me Back",
+        "In My Blood",
+        "Senorita",
+        "Mercy",
+        "If I Can't Have You",
+        "Lost in Japan",
+        "Wonder",
+        "Life of the Party",
+        "Something Big",
+        "Fallin' All In You"
+      ]
+    },
+    {
+      "name": "Arijit Singh",
+      "country": "India",
+      "songs": [
+        "Tum Hi Ho",
+        "Channa Mereya",
+        "Jeene Laga Hoon",
+        "Agar Tum Saath Ho",
+        "Raabta",
+        "Gerua",
+        "Kabira",
+        "Tera Yaar Hoon Main",
+        "Phir Bhi Tumko Chaahunga",
+        "Muskurane",
+        "Janam Janam",
+        "Ae Dil Hai Mushkil"
+      ]
+    },
+    {
+      "name": "Shreya Ghoshal",
+      "country": "India",
+      "songs": [
+        "Teri Meri",
+        "Sun Raha Hai",
+        "Saans",
+        "Deewani Mastani",
+        "Nagada Sang Dhol",
+        "Manwa Laage",
+        "Chikni Chameli",
+        "Dola Re Dola",
+        "Ghoomar",
+        "Raabta",
+        "Pinga",
+        "Pal"
+      ]
+    },
+    {
+      "name": "A. R. Rahman",
+      "country": "India",
+      "songs": [
+        "Jai Ho",
+        "Tum Tak",
+        "Kun Faya Kun",
+        "Tere Bina",
+        "Dil Se Re",
+        "Vande Mataram",
+        "Agar Tum Saath Ho",
+        "Taal Se Taal Mila",
+        "Patakha Guddi",
+        "Jashn-E-Bahaara",
+        "Chaiyya Chaiyya",
+        "Enna Sona"
+      ]
+    },
+    {
+      "name": "Badshah",
+      "country": "India",
+      "songs": [
+        "DJ Waley Babu",
+        "Genda Phool",
+        "Paani Paani",
+        "Mercy",
+        "Kala Chashma",
+        "Jugnu",
+        "She Move It Like",
+        "Proper Patola",
+        "Tareefan",
+        "Buzz",
+        "Paagal",
+        "Heartless"
+      ]
+    },
+    {
+      "name": "Divine",
+      "country": "India",
+      "songs": [
+        "Meri Gully Mein",
+        "3:59 AM",
+        "Kohinoor",
+        "Chal Bombay",
+        "Farak",
+        "Jungli Sher",
+        "Kaam 25",
+        "Vibe Hai",
+        "Sher Aaya Sher",
+        "Satya",
+        "Mirchi",
+        "City Slums"
+      ]
+    },
+    {
+      "name": "Neha Kakkar",
+      "country": "India",
+      "songs": [
+        "Kar Gayi Chull",
+        "London Thumakda",
+        "Garmi",
+        "Aankh Marey",
+        "Dilbar",
+        "Kala Chashma",
+        "Coca Cola",
+        "Taaron Ke Shehar",
+        "O Saki Saki",
+        "Mile Ho Tum Humko",
+        "Badri Ki Dulhania",
+        "Nikle Currant"
+      ]
+    },
+    {
+      "name": "Shankar Mahadevan",
+      "country": "India",
+      "songs": [
+        "Breathless",
+        "Mitwa",
+        "Maa",
+        "Kajra Re",
+        "Desi Girl",
+        "Lakshya",
+        "Tere Naina",
+        "Jhoom Barabar Jhoom",
+        "Pretty Woman",
+        "Uff Teri Ada",
+        "Galla Goodiyan",
+        "Dil Chahta Hai"
+      ]
+    },
+    {
+      "name": "Armaan Malik",
+      "country": "India",
+      "songs": [
+        "Bol Do Na Zara",
+        "Wajah Tum Ho",
+        "Sab Tera",
+        "Main Rahoon Ya Na Rahoon",
+        "Jab Tak",
+        "Pehla Pyaar",
+        "Butta Bomma",
+        "Teri Meri Kahani",
+        "Hua Hain Aaj Pehli Baar",
+        "Besabriyaan",
+        "Tootey Khaab",
+        "Control"
+      ]
+    },
+    {
+      "name": "Raftaar",
+      "country": "India",
+      "songs": [
+        "Swag Mera Desi",
+        "Toh Dishoom",
+        "Dilli Waali Baatcheet",
+        "Dhaakad",
+        "Gall Goriye",
+        "Baby Marvake Maanegi",
+        "Main Wahi Hoon",
+        "Go Pagal",
+        "Besharam",
+        "Sheher Ki Ladki",
+        "Naachne Ka Shaunq",
+        "Instagram Love"
+      ]
+    },
+    {
+      "name": "King",
+      "country": "India",
+      "songs": [
+        "Warcry",
+        "Streets & Suits",
+        "Machiney",
+        "Goat Shit",
+        "Sinner",
+        "Desi Dan Bilzerrian",
+        "Tu aake dekhle",
+        "Legends",
+        "Maan Meri Jaan",
+        "Misfit",
+        "Fuck What They Say",
+        "We are the one"
+      ]
+    }
+  ],
+  "playlists": [
+    {
+      "playlistName": "Party Anthems",
+      "songs": [
+        { "title": "DJ Waley Babu", "artist": "Badshah" },
+        { "title": "London Thumakda", "artist": "Neha Kakkar" },
+        { "title": "Genda Phool", "artist": "Badshah" },
+        { "title": "Kala Chashma", "artist": "Badshah" },
+        { "title": "Garmi", "artist": "Neha Kakkar" },
+        { "title": "Aankh Marey", "artist": "Neha Kakkar" },
+        { "title": "Proper Patola", "artist": "Badshah" },
+        { "title": "Coca Cola", "artist": "Neha Kakkar" },
+        { "title": "Mercy", "artist": "Badshah" },
+        { "title": "O Saki Saki", "artist": "Neha Kakkar" }
+      ]
+    },
+    {
+      "playlistName": "Bollywood Melodies",
+      "songs": [
+        { "title": "Tum Hi Ho", "artist": "Arijit Singh" },
+        { "title": "Channa Mereya", "artist": "Arijit Singh" },
+        { "title": "Lag Ja Gale", "artist": "Lata Mangeshkar" },
+        { "title": "Kabira", "artist": "Arijit Singh" },
+        { "title": "Nagada Sang Dhol", "artist": "Shreya Ghoshal" },
+        { "title": "Breathless", "artist": "Shankar Mahadevan" },
+        { "title": "Gerua", "artist": "Arijit Singh" },
+        { "title": "Maa", "artist": "Shankar Mahadevan" },
+        { "title": "Kun Faya Kun", "artist": "A. R. Rahman" },
+        { "title": "Phir Bhi Tumko Chaahunga", "artist": "Arijit Singh" }
+      ]
+    },
+    {
+      "playlistName": "Rap Vibes",
+      "songs": [
+        { "title": "Rap God", "artist": "Eminem" },
+        { "title": "Swag Mera Desi", "artist": "Raftaar" },
+        { "title": "Meri Gully Mein", "artist": "Divine" },
+        { "title": "Without Me", "artist": "Eminem" },
+        { "title": "Vibe Hai", "artist": "Divine" },
+        { "title": "Naachne Ka Shaunq", "artist": "Raftaar" },
+        { "title": "The Real Slim Shady", "artist": "Eminem" },
+        { "title": "Chal Bombay", "artist": "Divine" },
+        { "title": "Baby Marvake Maanegi", "artist": "Raftaar" },
+        { "title": "Mockingbird", "artist": "Eminem" }
+      ]
+    },
+    {
+      "playlistName": "Pop Hits",
+      "songs": [
+        { "title": "Love Story", "artist": "Taylor Swift" },
+        { "title": "Shape of You", "artist": "Ed Sheeran" },
+        { "title": "Teri Meri", "artist": "Shreya Ghoshal" },
+        { "title": "Mercy", "artist": "Badshah" },
+        { "title": "Sab Tera", "artist": "Armaan Malik" },
+        { "title": "Blank Space", "artist": "Taylor Swift" },
+        { "title": "Perfect", "artist": "Ed Sheeran" },
+        { "title": "Deewani Mastani", "artist": "Shreya Ghoshal" },
+        { "title": "Mile Ho Tum Humko", "artist": "Neha Kakkar" },
+        { "title": "Not Afraid", "artist": "Eminem" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  scrollbar-color: #000000 #0d0d0d;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Raleway", sans-serif;
+}
+
+::selection {
+  background: #9661ed8a;
+  /* Background color */
+  color: #000000;
+  /* Text color */
+}
+
+.WAVE {
+  color: #ffffffd7;
+}
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 850px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  z-index: 2;
+  border: 3px rgba(255, 255, 255, 0.512) solid;
+  backdrop-filter: blur(5px) brightness(0.8) contrast(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: blurAnimation 5s infinite;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(202, 202, 202, 0.1), rgba(72, 12, 169, 0.1));
+  z-index: 1;
+}
+
+@keyframes blurAnimation {
+  0% {
+    backdrop-filter: blur(2px);
+  }
+  50% {
+    backdrop-filter: blur(5px);
+  }
+  100% {
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* .border-container{
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.border-container::after, .border-container::before{
+  content: '';
+  position: absolute;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 70%, rgb(128, 0, 128),rgb(0, 0, 128));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 1;
+  padding: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.border-container::before{
+  filter: blur(80px);
+  opacity: 0.9;
+}
+
+/* //spin animation */
+
+/* @keyframes spin {
+  form{
+    --angle:0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}  */
+
+.form-container {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  padding: 0px 40px;
+  transition: all 0.6s ease-in-out;
+  overflow: hidden !important;
+}
+.sign-up-container {
+  opacity: 0;
+  z-index: 1;
+  overflow: hidden !important;
+}
+.sign-in-container {
+  z-index: 2;
+  overflow: hidden !important;
+}
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px;
+  overflow: hidden !important;
+}
+h1 {
+  color: #000000;
+  overflow: hidden !important;
+}
+.social-container {
+  margin: 20px 0px;
+  overflow: hidden !important;
+}
+.social-container a {
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
+  height: 40px;
+  width: 40px;
+  overflow: hidden !important;
+}
+span {
+  font-size: 12px;
+  overflow: hidden !important;
+}
+.infield {
+  position: relative;
+  margin: 8px 0px;
+  width: 100%;
+  overflow: hidden !important;
+}
+input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #ffffff00;
+  /* background-color: #dca8ff49; */
+  border: none;
+  outline: none;
+  overflow: hidden !important;
+  border-bottom: #0000006a solid 2px;
+  /* border-bottom: #71319c solid 3px; */
+}
+input:active {
+  background-color: #ffffff00;
+  /* background-color: #dca8ff49; */
+  overflow: hidden !important;
+}
+
+input:focus {
+  background: linear-gradient(150deg, #701ab128, #ae4cf026);
+  border-radius: 3px;
+  overflow: hidden !important;
+  color: black;
+  /* background-color: #dca8ff49; */
+}
+
+label {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: var(--linear-grad);
+  transition: 0.3s;
+  overflow: hidden !important;
+}
+
+input:focus ~ label {
+  width: 100%;
+  overflow: hidden !important;
+}
+
+a {
+  color: #ffffff;
+  font-size: 1em;
+  text-decoration: none;
+  margin: 15px 0px;
+  overflow: hidden !important;
+}
+
+a.forgot {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #320053;
+  overflow: hidden !important;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  color: #000000;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  overflow: hidden !important;
+}
+
+button {
+  background-color: transparent;
+  font-size: 12px;
+  color: #000000;
+  font-weight: bold;
+}
+button:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form-container button {
+  margin-top: 17px;
+  transition: 80ms ease-in;
+  transition: border, 0.2s ease-in-out;
+  overflow: hidden !important;
+}
+.form-container button:hover {
+  color: #ffffff;
+  /* color: #4f1775; */
+  overflow: hidden !important;
+  cursor: pointer;
+}
+.animation {
+  overflow: hidden !important;
+}
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 9;
+  overflow: hidden !important;
+}
+
+.overlay {
+  position: relative;
+  color: #000000;
+  left: -150%;
+  height: 100%;
+  width: 250%;
+  overflow: hidden !important;
+  transition: transform 0.6s ease-in-out;
+}
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 40px;
+  text-align: center;
+  height: 100%;
+  width: 340px;
+  transition: 0.6s ease-in-out;
+  overflow: hidden !important;
+}
+.overlay-left {
+  right: 60%;
+  transform: translateX(-12%);
+  overflow: hidden !important;
+}
+.overlay-right {
+  right: 0;
+  transform: translateX(0%);
+  overflow: hidden !important;
+}
+.overlay-panel h1 {
+  color: #000000;
+  overflow: hidden !important;
+}
+p {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 30px;
+  margin: 25px 0px 35px;
+  overflow: hidden !important;
+  color: #ffffff;
+}
+.overlay-panel button {
+  border: none;
+  background-color: transparent;
+  overflow: hidden !important;
+}
+.right-panel-active .overlay-container {
+  transform: translateX(-150%);
+  overflow: hidden !important;
+}
+.right-panel-active .overlay {
+  transform: translateX(50%);
+  overflow: hidden !important;
+}
+.right-panel-active .overlay-left {
+  transform: translateX(25%);
+  overflow: hidden !important;
+}
+.right-panel-active .overlay-right {
+  transform: translateX(35%);
+  overflow: hidden !important;
+}
+.right-panel-active .sign-in-container {
+  transform: translateX(20%);
+  opacity: 0;
+  overflow: hidden !important;
+}
+.right-panel-active .sign-up-container {
+  transform: translateX(66.7%);
+  overflow: hidden !important;
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.4s;
+}
+@keyframes show {
+  0%,
+  50% {
+    opacity: 0;
+    z-index: -1;
+  }
+  50.1%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+.btnScaled {
+  animation: scaleBtn 0.4s;
+}
+@keyframes scaleBtn {
+  0% {
+    width: 143.67px;
+  }
+  50% {
+    width: 250px;
+  }
+  100% {
+    width: 143.67px;
+  }
+}
+
+/* nav */
+nav.sideBar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.logo a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.navigation ul {
+  list-style: none;
+  line-height: 50px;
+  padding: 0;
+}
+
+.navigation ul li {
+  padding: 10px 0;
+}
+
+.navigation ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.navigation ul li a:hover {
+  color: rgb(68, 68, 68);
+}
+
+.fa {
+  margin-right: 10px;
+}
+
+.policies {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.policies ul {
+  list-style: none;
+  padding: 0;
+}
+
+.policies ul li {
+  padding: 5px 0;
+}
+
+.policies ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.policies ul li a:hover {
+  color: var(--policy-link-hover-color);
+  text-decoration: underline;
+}

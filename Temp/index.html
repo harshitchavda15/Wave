@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Search</title>
+
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Raleway", sans-serif;
+            background: linear-gradient(to bottom right, #264485, #031d79);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input[type="search"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .items {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .items ul {
+            list-style: none;
+        }
+
+        .items li {
+            padding: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .items li:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .items li:last-child {
+            border-bottom: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="search" id="searchBAR" placeholder="Search any fruit" oninput="search()">
+        <div class="items">
+            <ul id="list"></ul>
+        </div>
+    </div>
+
+    <script>
+        const fruits = [
+            "Apple", "Banana", "Berry", "Cherry", "Date", "Elderberry",
+            "Fig", "Grape", "Honeydew", "Kiwi", "Lemon", "Mango",
+            "Nectarine", "Orange", "Papaya", "Quince", "Raspberry", 
+            "Strawberry", "Tangerine", "Ugli Fruit", "Watermelon"
+        ];
+
+        const list = document.getElementById('list');
+
+        // Populate the list with fruits
+        fruits.forEach(fruit => {
+            const li = document.createElement('li');
+            li.textContent = fruit;
+            list.appendChild(li);
+        });
+
+        function search() {
+            const input = document.getElementById('searchBAR').value.toLowerCase();
+            const items = document.querySelectorAll('#list li');
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

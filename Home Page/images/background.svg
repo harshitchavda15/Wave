@@ -1,0 +1,27 @@
+<svg width="1540" height="729" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Gradient -->
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#264485;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#031d79;stop-opacity:1" />
+        </linearGradient>
+       
+    </defs>
+    <rect width="1540" height="729" fill="url(#grad1)" />
+
+    <!-- Waves -->
+    <path id="wave1" d="M0,583 C150,533 350,633 520,583 C650,533 850,633 1040,583 C1150,533 1350,633 1560,583 L1560,729 L0,729 Z"
+        fill="rgba(255,255,255,0.3)" />
+     <path id="wave2" d="M0,635 C150,585 350,685 520,635 C650,585 850,685 1040,635 C1150,585 1350,685 1560,635 L1560,729 L0,729 Z"
+        fill="rgba(255,255,255,0.2)" />
+
+    <!-- Musical Notes -->
+    <text id="note1" x="200" y="240" font-size="100" fill="white" opacity="0.5">&#9835;</text>
+    <text id="note2" x="550" y="160" font-size="100" fill="white" opacity="0.7">&#9834;</text>
+    <text id="note3" x="900" y="280" font-size="100" fill="white" opacity="0.5">&#9833;</text>
+    <text id="note4" x="1250" y="100" font-size="100" fill="white" opacity="0.6">&#9836;</text>
+    <text id="letter1" x="200" y="410" font-size="100" fill="white" opacity="0.5">W</text>
+    <text id="letter2" x="550" y="330" font-size="100" fill="white" opacity="0.7">A</text>
+    <text id="letter3" x="900" y="450" font-size="100" fill="white" opacity="0.5">V</text>
+    <text id="letter4" x="1250" y="270" font-size="100" fill="white" opacity="0.6">E</text>
+</svg>

@@ -1,0 +1,202 @@
+[
+  {
+    "image": "images/Viva Latino.jpg",
+    "songName": "Despacito",
+    "artistName": "Luis Fonsi",
+    "albumName": "Vida",
+    "totalPlays": "789,123 plays",
+    "duration": "4:42"
+  },
+  {
+    "image": "images/Deep Focus.jpg",
+    "songName": "Weightless",
+    "artistName": "Marconi Union",
+    "albumName": "Ambient Chill",
+    "totalPlays": "654,321 plays",
+    "duration": "8:00"
+  },
+  {
+    "image": "images/Chill Hits.jpg",
+    "songName": "Sunflower",
+    "artistName": "Post Malone",
+    "albumName": "Hollywood's Bleeding",
+    "totalPlays": "987,654 plays",
+    "duration": "2:38"
+  },
+  {
+    "image": "images/Beats to think to.jpg",
+    "songName": "Lofi Study Beats",
+    "artistName": "ChilledCow",
+    "albumName": "Lofi Hip Hop",
+    "totalPlays": "123,789 plays",
+    "duration": "5:22"
+  },
+  {
+    "image": "images/Viva Latino.jpg",
+    "songName": "Bailando",
+    "artistName": "Enrique Iglesias",
+    "albumName": "Sex and Love",
+    "totalPlays": "1,234,567 plays",
+    "duration": "4:03"
+  },
+  {
+    "image": "images/Viva Latino.jpg",
+    "songName": "Despacito",
+    "artistName": "Luis Fonsi",
+    "albumName": "Vida",
+    "totalPlays": "789,123 plays",
+    "duration": "4:42"
+  },
+  {
+    "image": "images/Deep Focus.jpg",
+    "songName": "Weightless",
+    "artistName": "Marconi Union",
+    "albumName": "Ambient Chill",
+    "totalPlays": "654,321 plays",
+    "duration": "8:00"
+  },
+  {
+    "image": "images/Chill Hits.jpg",
+    "songName": "Sunflower",
+    "artistName": "Post Malone",
+    "albumName": "Hollywood's Bleeding",
+    "totalPlays": "987,654 plays",
+    "duration": "2:38"
+  },
+  {
+    "image": "images/Beats to think to.jpg",
+    "songName": "Lofi Study Beats",
+    "artistName": "ChilledCow",
+    "albumName": "Lofi Hip Hop",
+    "totalPlays": "123,789 plays",
+    "duration": "5:22"
+  },
+  {
+    "image": "images/Viva Latino.jpg",
+    "songName": "Bailando",
+    "artistName": "Enrique Iglesias",
+    "albumName": "Sex and Love",
+    "totalPlays": "1,234,567 plays",
+    "duration": "4:03"
+  },
+  {
+    "image": "images/Deep Focus.jpg",
+    "songName": "Mellomaniac",
+    "artistName": "DJ Shah",
+    "albumName": "Chill Out Classics",
+    "totalPlays": "789,456 plays",
+    "duration": "6:21"
+  },
+  {
+    "image": "images/Chill Hits.jpg",
+    "songName": "Circles",
+    "artistName": "Post Malone",
+    "albumName": "Hollywood's Bleeding",
+    "totalPlays": "654,789 plays",
+    "duration": "3:35"
+  },
+  {
+    "image": "images/Beats to think to.jpg",
+    "songName": "Night Owl",
+    "artistName": "Gerry Rafferty",
+    "albumName": "City to City",
+    "totalPlays": "345,678 plays",
+    "duration": "4:27"
+  },
+  {
+    "image": "images/Viva Latino.jpg",
+    "songName": "Taki Taki",
+    "artistName": "DJ Snake",
+    "albumName": "Carte Blanche",
+    "totalPlays": "2,345,678 plays",
+    "duration": "3:32"
+  },
+  {
+    "image": "images/Deep Focus.jpg",
+    "songName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "albumName": "Rumours",
+    "totalPlays": "1,234,789 plays",
+    "duration": "4:17"
+  },
+  {
+    "image": "images/Chill Hits.jpg",
+    "songName": "Blinding Lights",
+    "artistName": "The Weeknd",
+    "albumName": "After Hours",
+    "totalPlays": "5,678,123 plays",
+    "duration": "3:20"
+  },
+  {
+    "image": "images/Beats to think to.jpg",
+    "songName": "Sparks",
+    "artistName": "Coldplay",
+    "albumName": "Parachutes",
+    "totalPlays": "456,789 plays",
+    "duration": "3:47"
+  },
+  {
+    "image": "images/Viva Latino.jpg",
+    "songName": "La Bicicleta",
+    "artistName": "Carlos Vives & Shakira",
+    "albumName": "Vives",
+    "totalPlays": "567,890 plays",
+    "duration": "3:48"
+  },
+  {
+    "image": "images/Deep Focus.jpg",
+    "songName": "Fade Into You",
+    "artistName": "Mazzy Star",
+    "albumName": "So Tonight That I Might See",
+    "totalPlays": "789,123 plays",
+    "duration": "4:56"
+  },
+  {
+    "image": "images/Chill Hits.jpg",
+    "songName": "Slow Dancing in a Burning Room",
+    "artistName": "John Mayer",
+    "albumName": "Continuum",
+    "totalPlays": "345,678 plays",
+    "duration": "4:02"
+  },
+  {
+    "image": "images/Beats to think to.jpg",
+    "songName": "Time",
+    "artistName": "Hans Zimmer",
+    "albumName": "Inception (Soundtrack)",
+    "totalPlays": "678,901 plays",
+    "duration": "4:35"
+  },
+  {
+    "image": "images/Viva Latino.jpg",
+    "songName": "Hips Don't Lie",
+    "artistName": "Shakira",
+    "albumName": "Oral Fixation, Vol. 2",
+    "totalPlays": "8,901,234 plays",
+    "duration": "3:38"
+  },
+  {
+    "image": "images/Deep Focus.jpg",
+    "songName": "Intro",
+    "artistName": "The xx",
+    "albumName": "xx",
+    "totalPlays": "678,123 plays",
+    "duration": "2:07"
+  },
+  {
+    "image": "images/Chill Hits.jpg",
+    "songName": "Yellow",
+    "artistName": "Coldplay",
+    "albumName": "Parachutes",
+    "totalPlays": "9,876,543 plays",
+    "duration": "4:26"
+  },
+  {
+    "image": "images/Beats to think to.jpg",
+    "songName": "Lose Yourself to Dance",
+    "artistName": "Daft Punk",
+    "albumName": "Random Access Memories",
+    "totalPlays": "4,321,678 plays",
+    "duration": "5:53"
+  }
+]

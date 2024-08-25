@@ -1,0 +1,52 @@
+<svg width="100vw" height="100vw" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#5f8ff5;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#01124d;stop-opacity:1" />
+        </linearGradient>
+
+        <!-- Gradient for Waves -->
+        <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:rgba(255,255,255,0.3);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:rgba(255,255,255,0.2);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgba(255,255,255,0.05);stop-opacity:1" />
+        </linearGradient>
+
+        <!-- Darker Gradient for Text -->
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6a1b9a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ab47bc;stop-opacity:1" />
+        </linearGradient>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+            .note {
+                font-family: 'Raleway', sans-serif;
+                fill: url(#textGradient); /* Apply gradient to text */
+            }
+            .letter {
+                font-family: 'Raleway', sans-serif;
+                font-weight: 600;
+                fill: url(#textGradient); /* Apply gradient to text */
+            }
+        </style>
+    </defs>
+
+    <!-- Background -->
+    <rect width="100vw" height="1200" fill="url(#grad1)" />
+    
+    <!-- Waves -->
+ <path id="wave1" d="M0,800 C200,750 400,850 600,800 C800,750 1000,850 1200,800 C1400,750 1600,850 1800,800 C2000,750 2200,850 2400,800 L2400,1200 L0,1200 Z" fill="url(#waveGradient1)" />
+<path id="wave2" d="M0,900 C100,950 300,850 500,900 C700,950 900,850 1100,900 C1300,950 1500,850 1700,900 C1900,950 2100,850 2300,900 C2500,950 2700,850 2900,900 L2900,1200 L0,1200 Z" fill="url(#waveGradient2)" />
+
+   <!-- Text with Gradients -->
+<text id="note1" x="400" y="300" font-size="100" opacity="0.8" class="note">&#9835;</text>
+<text id="note2" x="750" y="220" font-size="100" opacity="0.8" class="note">&#9834;</text>
+<text id="note3" x="1100" y="340" font-size="100" opacity="0.8" class="note">&#9833;</text>
+<text id="note4" x="1450" y="260" font-size="100" opacity="0.8" class="note">&#9836;</text>
+
+
+</svg>
