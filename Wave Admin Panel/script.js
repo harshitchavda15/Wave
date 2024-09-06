@@ -1,149 +1,85 @@
+// GSAP animations
 document.addEventListener('DOMContentLoaded', () => {
-  showSection('artists');
-  loadArtists();
-  loadAlbums();
-  loadTracks();
-  loadPlaylists();
-  populateTrackCheckboxes();
+  // Animate navigation items
+  gsap.from("nav ul li", {
+    opacity: 0,
+    y: -20,
+    stagger: 0.2,
+    duration: 1,
+    ease: "power2.out",
+  });
+
+  // Animate sections when they become visible
+  gsap.utils.toArray('.admin-section').forEach(section => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%", // Start animation when the section comes into view
+        toggleActions: "play none none none"
+      }
+    });
+  });
+
+  // SVG animation
+  gsap.fromTo("#animated-svg polygon", 
+    { drawSVG: "0%" }, 
+    { drawSVG: "100%", duration: 2, ease: "power1.inOut", repeat: -1, yoyo: true }
+  );
 });
 
-function showSection(sectionId) {
-  const sections = document.querySelectorAll('.admin-section');
-  sections.forEach(section => {
-    section.style.display = section.id === sectionId ? 'block' : 'none';
-  });
-}
-
+// Show modal with GSAP animation
 function showModal(modalId) {
-  document.getElementById(modalId).style.display = 'block';
+  const modal = document.getElementById(modalId);
+  modal.style.display = 'block';
+  gsap.fromTo(
+    modal.querySelector(".modal-content"),
+    { scale: 0, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.5, ease: "elastic.out(1, 0.75)" }
+  );
 }
 
+// Hide modal with GSAP animation
 function hideModal(modalId) {
-  document.getElementById(modalId).style.display = 'none';
-}
-
-// Mock data storage
-const dataStore = {
-  artists: [],
-  albums: [],
-  tracks: [],
-  playlists: []
-};
-
-function loadArtists() {
-  const artistList = document.getElementById('artistList');
-  artistList.innerHTML = dataStore.artists
-    .map(
-      artist => `<div><strong>${artist.name}</strong> - ${artist.genre}</div>`
-    )
-    .join('');
-}
-
-function loadAlbums() {
-  const albumList = document.getElementById('albumList');
-  albumList.innerHTML = dataStore.albums
-    .map(
-      album => `<div><strong>${album.title}</strong> - ${album.artist}</div>`
-    )
-    .join('');
-}
-
-function loadTracks() {
-  const trackList = document.getElementById('trackList');
-  trackList.innerHTML = dataStore.tracks
-    .map(
-      track => `<div><strong>${track.title}</strong> - ${track.album}</div>`
-    )
-    .join('');
-}
-
-function loadPlaylists() {
-  const playlistList = document.getElementById('playlistList');
-  playlistList.innerHTML = dataStore.playlists
-    .map(
-      playlist => `<div><strong>${playlist.name}</strong></div>`
-    )
-    .join('');
-}
-
-// Populate track checkboxes
-function populateTrackCheckboxes() {
-  const trackCheckboxes = document.getElementById('trackCheckboxes');
-  trackCheckboxes.innerHTML = dataStore.tracks
-    .map(
-      (track, index) => `
-      <div class="track-checkbox">
-        <input type="checkbox" id="trackCheckbox${index}" name="trackCheckbox" value="${track.title}" />
-        <label for="trackCheckbox${index}">${track.title}</label>
-      </div>`
-    )
-    .join('');
-}
-
-// Filter tracks based on search input
-function filterTracks() {
-  const searchQuery = document.getElementById('playlistSearch').value.toLowerCase();
-  const trackCheckboxes = document.querySelectorAll('.track-checkbox');
-  trackCheckboxes.forEach(trackCheckbox => {
-    const trackTitle = trackCheckbox.querySelector('label').textContent.toLowerCase();
-    trackCheckbox.style.display = trackTitle.includes(searchQuery) ? 'block' : 'none';
+  const modal = document.getElementById(modalId);
+  gsap.to(modal.querySelector(".modal-content"), {
+    scale: 0,
+    opacity: 0,
+    duration: 0.3,
+    ease: "power2.in",
+    onComplete: () => (modal.style.display = 'none'),
   });
 }
 
-// Form submission handling
-document.getElementById('artistForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const name = e.target.artistName.value;
-  const bio = e.target.artistBio.value;
-  const genre = e.target.artistGenre.value;
-  dataStore.artists.push({ name, bio, genre });
-  loadArtists();
-  hideModal('artistModal');
-  showToast('Artist added successfully!');
+// Button hover animations
+const buttons = document.querySelectorAll('.admin-section button');
+buttons.forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    gsap.to(button, { scale: 1.1, duration: 0.3, ease: "power2.out" });
+  });
+  button.addEventListener('mouseleave', () => {
+    gsap.to(button, { scale: 1, duration: 0.3, ease: "power2.in" });
+  });
 });
 
-document.getElementById('albumForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const title = e.target.albumTitle.value;
-  const releaseDate = e.target.albumReleaseDate.value;
-  const artist = e.target.albumArtist.value;
-  dataStore.albums.push({ title, releaseDate, artist });
-  loadAlbums();
-  hideModal('albumModal');
-  showToast('Album added successfully!');
-});
-
-document.getElementById('trackForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const title = e.target.trackTitle.value;
-  const duration = e.target.trackDuration.value;
-  const album = e.target.trackAlbum.value;
-  dataStore.tracks.push({ title, duration, album });
-  loadTracks();
-  populateTrackCheckboxes(); // Update track checkboxes
-  hideModal('trackModal');
-  showToast('Track added successfully!');
-});
-
-document.getElementById('playlistForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const name = e.target.playlistName.value;
-  const description = e.target.playlistDescription.value;
-  const selectedTracks = Array.from(e.target.trackCheckbox)
-    .filter(checkbox => checkbox.checked)
-    .map(checkbox => checkbox.value);
-  dataStore.playlists.push({ name, description, tracks: selectedTracks });
-  loadPlaylists();
-  hideModal('playlistModal');
-  showToast('Playlist added successfully!');
-});
-
-// Toast notification
+// Toast notification animation
 function showToast(message) {
   const toast = document.getElementById('toast');
   toast.textContent = message;
-  toast.classList.add('show');
+  gsap.to(toast, {
+    visibility: "visible",
+    opacity: 1,
+    duration: 0.5,
+    ease: "power2.out",
+  });
   setTimeout(() => {
-    toast.classList.remove('show');
+    gsap.to(toast, {
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.in",
+      onComplete: () => (toast.style.visibility = "hidden"),
+    });
   }, 3000);
 }

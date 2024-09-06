@@ -33,14 +33,19 @@ Base = declarative_base()
 class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True, index=True)
-    email = Column(String, unique=True)
+    username = Column(String, unique=True, index=True)
     password = Column(String)
 
 # Create the database table
 Base.metadata.create_all(bind=engine)
+logger.info("Database connected and tables created.")
 
-# Pydantic Model for Signup
+# Pydantic Models
 class SignUpRequest(BaseModel):
+    username: str
+    password: str
+
+class LoginRequest(BaseModel):
     username: str
     password: str
 
@@ -52,6 +57,7 @@ def get_db():
     finally:
         db.close()
 
+# Signup Route
 @app.post("/signup", status_code=status.HTTP_201_CREATED)
 def signup(request: SignUpRequest, db: Session = Depends(get_db)):
     logger.info(f"Received signup request for username: {request.username}")
@@ -61,11 +67,10 @@ def signup(request: SignUpRequest, db: Session = Depends(get_db)):
     if user:
         logger.warning(f"Signup failed - Username {request.username} already exists.")
         raise HTTPException(status_code=400, detail="Username already exists.")
-    
-    # Hash the password and store the user in the database
+
+    # Store the user in the database
     try:
-        hashed_password = get_password_hash(request.password)
-        new_user = User(username=request.username, password=hashed_password)
+        new_user = User(username=request.username, password=request.password)
         db.add(new_user)
         db.commit()
         db.refresh(new_user)
@@ -76,6 +81,21 @@ def signup(request: SignUpRequest, db: Session = Depends(get_db)):
         logger.error(f"Error during signup for username {request.username}: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
+# Login Route
+@app.post("/login")
+def login(request: LoginRequest, db: Session = Depends(get_db)):
+    logger.info(f"Received login request for username: {request.username}")
+    
+    # Check if the user exists
+    user = db.query(User).filter(User.username == request.username).first()
+    if not user or user.password != request.password:
+        logger.warning(f"Login failed - Invalid username or password for username {request.username}.")
+        raise HTTPException(status_code=400, detail="Invalid username or password.")
+
+    # Successful login
+    logger.info(f"Login successful for username: {request.username}")
+    return {"message": "Login successful!"}
+
 if __name__ == "__main__":
     logger.info("Starting FastAPI application...")
-    uvicorn.run(app, host="128.0.0.1", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)

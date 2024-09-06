@@ -5,25 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Panel - Wave</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   </head>
+  
   <body>
-    <div class="container">
-      <h1>Wave Admin Panel</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="#artists" onclick="showSection('artists')">Artists</a>
-          </li>
-          <li><a href="#albums" onclick="showSection('albums')">Albums</a></li>
-          <li><a href="#tracks" onclick="showSection('tracks')">Tracks</a></li>
-          <li>
-            <a href="#playlists" onclick="showSection('playlists')"
-              >Playlists</a
-            >
-          </li>
-        </ul>
-      </nav>
+    <header>
+      <div class="container">
+        <section class="admin-section">
+          <h2>Welcome to the Admin Panel</h2>
+          <img src="your-image-path.jpg" alt="Admin Panel Image" class="admin-image" />
+          <p>This section contains important admin features.</p>
+        </section>
+        
+        <nav>
+          <ul>
+            <li>
+              <a href="#artists" onclick="showSection('artists')">Artists</a>
+            </li>
+            <li><a href="#albums" onclick="showSection('albums')">Albums</a></li>
+            <li><a href="#tracks" onclick="showSection('tracks')">Tracks</a></li>
+            <li>
+              <a href="#playlists" onclick="showSection('playlists')">Playlists</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+    <main class="container">
       <!-- Artists Section -->
       <section id="artists" class="admin-section">
         <h2>Artists</h2>
@@ -52,7 +62,7 @@
         <button onclick="showModal('playlistModal')">Add Playlist</button>
         <div id="playlistList"></div>
       </section>
-    </div>
+    </main>
 
     <!-- Modals -->
     <div id="artistModal" class="modal">
@@ -125,23 +135,14 @@
             name="playlistDescription"
             required
           ></textarea>
-          <label for="playlistSearch">Search Tracks:</label>
-          <input
-            type="text"
-            id="playlistSearch"
-            placeholder="Search tracks..."
-            oninput="filterTracks()"
-          />
-          <label for="playlistTracks">Select Tracks:</label>
+          <label for="trackCheckboxes">Select Tracks:</label>
           <div id="trackCheckboxes"></div>
           <button type="submit">Add Playlist</button>
         </form>
       </div>
     </div>
 
-    <!-- Toast Notifications -->
     <div id="toast" class="toast"></div>
-
     <script src="script.js"></script>
   </body>
 </html>
